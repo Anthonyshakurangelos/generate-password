@@ -4,9 +4,6 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   
-
-    
-
   var numbers = "0123456789".split("");
 
   var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -30,13 +27,8 @@ function writePassword() {
    }else {
     alert("Must choose between 8-128 characters!");
     writePassword()
-    
-  
    }
-    
-   
-  //Need a loop thats going to push user selected array
-  // push characters to the chars array
+  
    for (var i = 0; i <=passwordLength; i++) {
     if (useNumbers) {
       chars.push(numbers[Math.floor(Math.random() * numbers.length)])
@@ -52,7 +44,6 @@ function writePassword() {
     }
     console.log(chars)
    }   
-  
 
   var password = "";
   for (var i = 0; i <=passwordLength; i++) {
@@ -60,13 +51,8 @@ function writePassword() {
     password += chars.join("").substring(randomNumber, randomNumber +1);
   }
     document.getElementById("password").value = password;
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("");
-
-  // passwordText.value = password;
 
 }
-
 // WHEN I click the button to generate a password
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -88,3 +74,5 @@ generateBtn.addEventListener("click", writePassword);
 // WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
 // ```
+
+// clean up code add notes and git add, git commit and push
